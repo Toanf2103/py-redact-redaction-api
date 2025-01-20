@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi.responses import StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from typing import Dict, List, Optional
 import fitz
 import io
@@ -21,6 +22,9 @@ app = FastAPI(
         "email": "nobitakute002@gmail.com"
     }
 )
+
+# Để phục vụ các tệp tĩnh (chẳng hạn như CSS hoặc hình ảnh) nếu cần
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Cấu hình CORS
 app.add_middleware(
