@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: py-pdf-redaction
+  template:
+    metadata:
+      labels:
+        app: py-pdf-redaction
+    spec:
+      containers:
+      - name: my-app
+        image: toanf2103/pdf-redaction-api:190103
+        ports:
+        - containerPort: 8000

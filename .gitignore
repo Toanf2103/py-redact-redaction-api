@@ -1,0 +1,55 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+env/
+venv/
+
+# FastAPI-related
+*.db
+*.sqlite3
+*.log
+
+# Dependency directories
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS Finder
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# pytest cache
+.cache/
+
+# Build directories
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Docker-related files
+docker-compose.override.yml
+*.docker
+
+# Environment variables file
+.env
+
+# IDE and Editor files
+*~
+*.swp
+*.swo
+
+# FastAPI / ASGI config files (optional)
+*.sock
