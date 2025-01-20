@@ -8,9 +8,18 @@ import io
 import json
 
 app = FastAPI(
-    title="PDF Redaction API",
-    description="API for redacting text from PDF files",
-    version="1.0.0"
+    title="My Application",
+    description="This application uses libraries licensed under the AGPL.",
+    version="1.0.0",
+    license_info={
+        "name": "AGPL v3",
+        "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+    },
+    contact={
+        "name": "py-redact-redaction-api",
+        "url": "https://github.com/Toanf2103/py-redact-redaction-api",  # Thay link GitHub của bạn
+        "email": "nobitakute002@gmail.com"
+    }
 )
 
 # Cấu hình CORS
