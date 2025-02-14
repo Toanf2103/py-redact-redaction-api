@@ -55,7 +55,7 @@ class Rule(BaseModel):
     ruleType: str
     coordinates: Coordinates
     pageNumber: int = Field(ge=0)
-    patternType: str
+    patternType: Optional[str] = None
     text_find: Optional[str] = None
 
 class RedactPDFRequest(BaseModel):
