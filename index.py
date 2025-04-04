@@ -225,11 +225,14 @@ def process_pdf_advanced(pdf_buffer: bytes, rules: List[Rule]) -> bytes:
                             bound_y1,
                             bound_y2
                         )
-
+            space = 2
+            print(rule)
+            if rule.ruleType != "all-text":
+                space = 40
             for word in words:
                 word_x1, word_y1, word_x2, word_y2 = word[:4]
                 # if (is_rectangle_inside(x1 - 5, y1 - 5, x2 + 5, y2 + 5, word_x1, word_y1, word_x2, word_y2)):
-                if (is_point_in_rectangle(x1 - 2, y1 - 2, x2 + 2, y2 + 2, word_x1, word_y1)):
+                if (is_point_in_rectangle(x1 + space, y1 - 1, x2 + 2, y2 + 1, word_x1, word_y1)):
                 #    (y1 <= word_y1 <= y2 or y1 <= word_y2 <= y2):
                     rect = fitz.Rect(word_x1, word_y1, word_x2, word_y2)
                     annot = page.add_redact_annot(rect)

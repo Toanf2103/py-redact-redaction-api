@@ -19,4 +19,4 @@ EXPOSE 8000
 # Chạy ứng dụng FastAPI khi container bắt đầu
 CMD ["uvicorn", "index:app", "--host", "0.0.0.0", "--port", "8000"]
 
-#uvicorn index:app --host 0.0.0.0 --port 8000
+# uvicorn index:app --host 0.0.0.0 --port 8000
