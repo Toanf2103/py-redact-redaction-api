@@ -14,9 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/
 
 # Mở cổng mà FastAPI sẽ chạy
-EXPOSE 8000
+EXPOSE 3000
 
 # Chạy ứng dụng FastAPI khi container bắt đầu
-CMD ["uvicorn", "index:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "index:app", "--host", "0.0.0.0", "--port", "3000"]
 
-# uvicorn index:app --host 0.0.0.0 --port 8000
+# uvicorn index:app --host 0.0.0.0 --port 3000
